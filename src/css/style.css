@@ -1,0 +1,2294 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;600;700;800&display=swap');
+
+:root {
+  --orange: #FF8A00;
+  --background: #05070D;
+  --surface: #0B1220;
+  --surface-light: #111B2B;
+  --text: #FFFFFF;
+  --muted: #8B98AA;
+  --border: rgba(255,255,255,0.09);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+}
+
+button, input {
+  font: inherit;
+}
+
+.auth-layout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.auth-brand {
+  background:
+    radial-gradient(ellipse at 50% 70%, #FF8A0020, transparent 55%),
+    linear-gradient(145deg, #0B1220, #05070D);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.brand-icon,
+.mobile-logo {
+  width: 92px;
+  height: 92px;
+  border: 2px solid var(--orange);
+  border-radius: 27px;
+  display: grid;
+  place-items: center;
+  color: var(--orange);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 55px;
+  font-weight: 800;
+  box-shadow: 0 0 40px #FF8A0030;
+  position: relative;
+}
+
+.brand-icon span,
+.mobile-logo span {
+  position: absolute;
+  font-size: 9px;
+  letter-spacing: 2px;
+  right: 8px;
+  bottom: 24px;
+}
+
+.auth-brand h1 {
+  margin-top: 28px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(25px, 3vw, 42px);
+  letter-spacing: 2px;
+}
+
+.auth-brand h1 span {
+  color: var(--orange);
+}
+
+.auth-brand > p {
+  margin-top: 14px;
+  color: var(--muted);
+  letter-spacing: 5px;
+  font-size: 11px;
+}
+
+.auth-brand small {
+  margin-top: 80px;
+  color: #667085;
+  letter-spacing: 4px;
+  font-size: 9px;
+}
+
+.brand-decoration {
+  width: 220px;
+  height: 1px;
+  margin-top: 35px;
+  background: linear-gradient(90deg, transparent, var(--orange), transparent);
+}
+
+.auth-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 35px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+}
+
+.mobile-logo {
+  display: none;
+}
+
+.eyebrow {
+  color: var(--orange);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+.auth-card h2 {
+  font-size: clamp(32px, 4vw, 43px);
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+}
+
+.auth-card h2 span {
+  color: var(--orange);
+}
+
+.description {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 14px;
+  margin-top: 16px;
+  margin-bottom: 35px;
+}
+
+.auth-card label {
+  display: block;
+  font-size: 10px;
+  color: #AAB4C2;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+}
+
+.phone-input {
+  display: flex;
+  height: 58px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.country-code {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 0 15px;
+  color: var(--text);
+  border-right: 1px solid var(--border);
+  font-size: 14px;
+}
+
+.phone-input input {
+  min-width: 0;
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0 14px;
+  font-size: 14px;
+}
+
+.phone-input:focus-within,
+.otp-input:focus {
+  border-color: var(--orange);
+}
+
+.primary-btn {
+  width: 100%;
+  height: 56px;
+  border: none;
+  border-radius: 12px;
+  background: var(--orange);
+  color: #080B10;
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  transition: 0.2s;
+}
+
+.primary-btn:hover {
+  background: #FFA32E;
+  box-shadow: 0 8px 30px #FF8A0030;
+  transform: translateY(-2px);
+}
+
+.security-note {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+  margin-top: 28px;
+  text-align: center;
+}
+
+.auth-footer {
+  color: #667085;
+  text-align: center;
+  font-size: 9px;
+  letter-spacing: 1px;
+  line-height: 2;
+  margin-top: 55px;
+}
+
+.auth-footer span {
+  display: block;
+  color: var(--orange);
+}
+
+.back-btn {
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  margin-bottom: 35px;
+  font-size: 13px;
+}
+
+.back-btn:hover {
+  color: var(--orange);
+}
+
+.step-icon {
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  background: #FF8A0018;
+  border: 1px solid #FF8A0050;
+  border-radius: 16px;
+  color: var(--orange);
+  font-size: 25px;
+  margin-bottom: 28px;
+}
+
+.otp-input {
+  width: 100%;
+  height: 65px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  outline: none;
+  background: var(--surface);
+  color: var(--orange);
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 12px;
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.otp-input::placeholder {
+  color: #566174;
+}
+
+@media (max-width: 760px) {
+  .auth-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-brand {
+    display: none;
+  }
+
+  .auth-panel {
+    min-height: 100vh;
+    padding: 28px;
+    align-items: center;
+  }
+
+  .mobile-logo {
+    display: grid;
+    width: 65px;
+    height: 65px;
+    border-radius: 20px;
+    font-size: 38px;
+    margin-bottom: 38px;
+  }
+
+  .mobile-logo span {
+    font-size: 7px;
+    bottom: 17px;
+    right: 5px;
+  }
+
+  .auth-card h2 {
+    font-size: 35px;
+  }
+
+  .auth-footer {
+    margin-top: 45px;
+  }
+}
+
+/* VIDLYRA CHAT - EMAIL MAGIC LINK */
+
+.email-input {
+  width: 100%;
+  height: 58px;
+  padding: 0 16px;
+  margin-bottom: 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  outline: none;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.email-input::placeholder {
+  color: #64748B;
+}
+
+.email-input:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px #FF8A0018;
+}
+
+.primary-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.auth-message {
+  min-height: 20px;
+  margin-top: 16px;
+  font-size: 12px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.auth-message.info {
+  color: #AAB4C2;
+}
+
+.auth-message.error {
+  color: #FF7777;
+}
+
+.auth-message.success {
+  color: #4ADE80;
+}
+
+.auth-card strong {
+  color: var(--text);
+  overflow-wrap: anywhere;
+}
+
+.profile-preview {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px;
+  margin-bottom: 24px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+}
+
+.profile-avatar {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 15px;
+  background: #FF8A0018;
+  border: 1px solid #FF8A0050;
+  color: var(--orange);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.profile-preview p {
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 5px;
+  overflow-wrap: anywhere;
+}
+
+.signout-btn {
+  display: block;
+  margin: 18px auto 0;
+}
+
+@media (max-width: 760px) {
+  .email-input {
+    height: 56px;
+  }
+}
+
+/* =================================
+   VIDLYRA CHAT - PROFILE SETUP
+================================= */
+
+.profile-layout {
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 50% 0%, #FF8A0010, transparent 45%),
+    var(--background);
+  padding: 25px;
+}
+
+.profile-header {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.profile-brand b {
+  color: var(--orange);
+}
+
+.profile-brand-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--orange);
+  border-radius: 12px;
+  color: var(--orange);
+  font-size: 25px;
+}
+
+.profile-logout {
+  margin: 0;
+}
+
+.profile-container {
+  width: 100%;
+  max-width: 680px;
+  margin: 65px auto 30px;
+}
+
+.profile-heading {
+  margin-bottom: 30px;
+}
+
+.profile-heading h1,
+.profile-complete-card h1 {
+  font-size: clamp(34px, 5vw, 48px);
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+}
+
+.profile-heading h1 span,
+.profile-complete-card h1 span {
+  color: var(--orange);
+}
+
+.profile-heading > p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 12px;
+  line-height: 1.7;
+}
+
+.profile-form-card,
+.profile-complete-card {
+  background: linear-gradient(145deg, #0D1523, #090D16);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 20px 70px #00000030;
+}
+
+.profile-image-placeholder {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding-bottom: 25px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.large-profile-avatar {
+  width: 76px;
+  height: 76px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 24px;
+  background: #FF8A0018;
+  border: 1px solid #FF8A0070;
+  color: var(--orange);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 40px;
+}
+
+.profile-image-placeholder strong {
+  font-size: 14px;
+}
+
+.profile-image-placeholder p {
+  color: var(--muted);
+  font-size: 11px;
+  margin-top: 7px;
+  line-height: 1.6;
+}
+
+.form-field {
+  margin-bottom: 23px;
+}
+
+.form-field label {
+  display: block;
+  color: #AAB4C2;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 11px;
+}
+
+.profile-input {
+  width: 100%;
+  min-height: 54px;
+  padding: 14px 16px;
+  border-radius: 11px;
+  border: 1px solid var(--border);
+  outline: none;
+  background: #080D17;
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.profile-input:focus {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px #FF8A0018;
+}
+
+.profile-input::placeholder {
+  color: #64748B;
+}
+
+.profile-input option {
+  background: #0B1220;
+  color: white;
+}
+
+.username-input-wrap {
+  display: flex;
+  align-items: center;
+  background: #080D17;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  padding-left: 16px;
+}
+
+.username-input-wrap:focus-within {
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px #FF8A0018;
+}
+
+.username-input-wrap > span {
+  color: var(--orange);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.username-input-wrap .profile-input {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.profile-textarea {
+  min-height: 110px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.form-field > small {
+  display: block;
+  color: #718096;
+  font-size: 10px;
+  margin-top: 9px;
+}
+
+.profile-save-btn {
+  margin-top: 15px;
+}
+
+.profile-footer {
+  color: #667085;
+  text-align: center;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-top: 30px;
+  line-height: 1.8;
+}
+
+.profile-complete-card {
+  width: 100%;
+  max-width: 500px;
+  margin: 100px auto;
+}
+
+.profile-complete-card .profile-preview {
+  margin-top: 30px;
+}
+
+.profile-complete-card .description {
+  margin-bottom: 25px;
+}
+
+@media (max-width: 600px) {
+  .profile-layout {
+    padding: 18px;
+  }
+
+  .profile-container {
+    margin-top: 45px;
+  }
+
+  .profile-form-card,
+  .profile-complete-card {
+    padding: 21px;
+    border-radius: 16px;
+  }
+
+  .profile-heading h1,
+  .profile-complete-card h1 {
+    font-size: 35px;
+  }
+
+  .large-profile-avatar {
+    width: 64px;
+    height: 64px;
+    font-size: 33px;
+    border-radius: 20px;
+  }
+}
+
+/* VIDLYRA CHAT - PROFILE MEDIA */
+
+.profile-media-section {
+  margin-bottom: 28px;
+}
+
+.media-field {
+  margin-bottom: 28px;
+}
+
+.media-field > label:first-child {
+  display: block;
+  color: #AAB4C2;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+}
+
+.media-preview-row {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.media-preview {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 25px;
+  background: #FF8A0018;
+  border: 1px solid #FF8A0060;
+  color: var(--orange);
+  font-family: 'Orbitron', sans-serif;
+  font-size: 42px;
+}
+
+.media-preview img,
+.cover-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.media-preview.has-image {
+  border-color: var(--orange);
+}
+
+.media-actions strong {
+  font-size: 13px;
+}
+
+.media-actions p {
+  color: var(--muted);
+  font-size: 10px;
+  margin: 7px 0 12px;
+}
+
+.upload-btn {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  min-height: 37px;
+  padding: 0 14px;
+  border: 1px solid #FF8A0070;
+  border-radius: 9px;
+  background: #FF8A0015;
+  color: var(--orange) !important;
+  font-size: 11px !important;
+  font-weight: 700;
+  letter-spacing: 0.3px !important;
+  cursor: pointer;
+}
+
+.upload-btn:hover {
+  background: #FF8A0030;
+}
+
+.remove-media-btn {
+  display: block;
+  border: none;
+  background: transparent;
+  color: #FF7777;
+  font-size: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.cover-preview {
+  width: 100%;
+  height: 155px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  margin-bottom: 13px;
+  border: 1px dashed #FF8A0060;
+  border-radius: 13px;
+  background:
+    radial-gradient(ellipse at center, #FF8A0020, transparent 70%),
+    #0B1220;
+  color: #8B98AA;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.cover-preview.has-image {
+  border-style: solid;
+  border-color: var(--orange);
+}
+
+@media (max-width: 480px) {
+  .media-preview-row {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .media-preview {
+    width: 78px;
+    height: 78px;
+    border-radius: 19px;
+  }
+
+  .cover-preview {
+    height: 125px;
+  }
+}
+/* =================================
+   VIDLYRA CHAT - RESPONSIVE IMAGE FIX
+================================= */
+
+/* Prevent horizontal page overflow */
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+/* Keep profile sections inside the viewport */
+.profile-layout,
+.profile-container,
+.profile-form-card,
+.profile-complete-card {
+    min-width: 0;
+    max-width: 100%;
+}
+
+.profile-form-card,
+.profile-complete-card {
+    overflow: hidden;
+}
+
+/* Prevent images from escaping their containers */
+.profile-container img {
+    max-width: 100%;
+}
+
+/* Cover image preview */
+.cover-preview {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 155px;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.cover-preview img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Profile completion cover */
+.profile-complete-card .cover-preview {
+    width: 100%;
+    max-width: 100%;
+    height: 155px;
+    margin: 20px 0;
+    border-radius: 13px;
+    overflow: hidden;
+}
+
+/* Avatar image */
+.media-preview img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) {
+    .profile-layout {
+        padding: 16px;
+    }
+
+    .profile-container {
+        width: 100%;
+        margin: 35px auto 20px;
+    }
+
+    .profile-complete-card {
+        width: 100%;
+        margin: 35px auto;
+        padding: 20px;
+    }
+
+    .cover-preview,
+    .profile-complete-card .cover-preview {
+        height: 125px;
+    }
+}
+
+/* SUCCESS PROFILE COVER FIX */
+
+.success-cover {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 155px;
+    margin: 25px 0;
+    overflow: hidden;
+    border-radius: 13px;
+    border: 1px solid rgba(255, 138, 0, 0.5);
+    box-sizing: border-box;
+    isolation: isolate;
+}
+
+.success-cover img {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile-complete-card .profile-avatar img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+@media (max-width: 600px) {
+    .success-cover {
+        height: 125px;
+    }
+
+    .profile-complete-card {
+        margin: 35px auto !important;
+        padding: 20px !important;
+    }
+}
+
+/* =================================
+   VIDLYRA CHAT - ANIME AVATAR GALLERY
+================================= */
+
+.avatar-gallery-section {
+    width: 100%;
+    margin: 25px 0 30px;
+}
+
+.avatar-gallery-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 16px;
+}
+
+.avatar-gallery-heading strong {
+    color: #FFFFFF;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+.avatar-gallery-heading small {
+    color: #8B98AA;
+    font-size: 11px;
+}
+
+.avatar-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.avatar-option {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    padding: 0;
+    overflow: hidden;
+    cursor: pointer;
+    border: 2px solid rgba(255,255,255,0.10);
+    border-radius: 15px;
+    background: #0B1220;
+    transition: 0.2s ease;
+}
+
+.avatar-option img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.avatar-option:hover {
+    border-color: #FF8A00;
+    transform: translateY(-3px);
+}
+
+.avatar-option.selected {
+    border: 3px solid #FF8A00;
+    box-shadow: 0 0 18px #FF8A0050;
+}
+
+.avatar-check {
+    display: none;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: #FF8A00;
+    color: #05070D;
+    font-size: 14px;
+    font-weight: 900;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-option.selected .avatar-check {
+    display: flex;
+}
+
+.avatar-gallery-hint {
+    margin-top: 12px;
+    color: #8B98AA;
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+@media (max-width: 480px) {
+    .avatar-gallery {
+        gap: 9px;
+    }
+
+    .avatar-option {
+        border-radius: 11px;
+    }
+}
+/* =================================
+   VIDLYRA CHAT - PEOPLE SEARCH
+================================= */
+
+.people-search-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 15px;
+    margin-top: 12px;
+    background: #080D17;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+}
+
+.people-search-wrap:focus-within {
+    border-color: var(--orange);
+    box-shadow: 0 0 0 3px #FF8A0018;
+}
+
+.people-search-wrap > span {
+    color: var(--orange);
+    font-weight: 700;
+}
+
+.people-search-wrap .profile-input {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+}
+
+.people-search-button {
+    margin-top: 16px;
+}
+
+.people-results {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.people-result {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+    padding: 13px;
+    background: #080D17;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+}
+
+.people-result-avatar {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #FF8A0018;
+    color: var(--orange);
+    font-family: Orbitron, sans-serif;
+    font-size: 22px;
+}
+
+.people-result-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.people-result-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+    gap: 4px;
+}
+
+.people-result-info strong {
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.people-result-info span,
+.people-result-info small {
+    color: var(--muted);
+    font-size: 10px;
+    overflow-wrap: anywhere;
+}
+
+.people-request-btn {
+    flex-shrink: 0;
+    padding: 9px 13px;
+    border: 1px solid #FF8A0070;
+    border-radius: 9px;
+    background: #FF8A0018;
+    color: var(--orange);
+    font-size: 11px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.people-request-btn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+    .people-result {
+        gap: 9px;
+        padding: 10px;
+    }
+
+    .people-result-avatar {
+        width: 42px;
+        height: 42px;
+    }
+
+    .people-request-btn {
+        padding: 8px 10px;
+    }
+}
+
+/* ========================================
+   INCOMING CHAT REQUEST ACTIONS
+======================================== */
+
+.request-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.people-reject-btn {
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  background: transparent;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.people-reject-btn:hover {
+  border-color: #ff5555;
+  color: #ff7777;
+}
+
+.people-reject-btn:disabled,
+.people-request-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .request-actions {
+    flex-wrap: wrap;
+  }
+
+  .people-reject-btn,
+  .people-request-btn {
+    padding: 9px 11px;
+    font-size: 12px;
+  }
+}
+/* ========================================
+   VIDLYRA CHAT - MESSAGING UI
+======================================== */
+
+.chat-container {
+  max-width: 850px;
+}
+
+.chat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.conversation-card {
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.conversation-card:hover,
+.conversation-card:focus-visible {
+  border-color: #FF8A00;
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.chat-user-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.chat-user-avatar,
+.chat-user-avatar img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.chat-user-avatar {
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #0B1220;
+  border: 1px solid #FF8A00;
+  color: #FF8A00;
+}
+
+.chat-user-avatar img {
+  object-fit: cover;
+}
+
+.chat-user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.chat-user-info strong {
+  color: #FFFFFF;
+}
+
+.chat-user-info span,
+.chat-user-info small {
+  color: #8B98AA;
+}
+
+.chat-refresh-btn {
+  margin-left: auto;
+}
+
+.chat-messages {
+  height: 420px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 4px;
+  scroll-behavior: smooth;
+}
+
+.chat-message-row {
+  display: flex;
+  width: 100%;
+}
+
+.chat-message-row.mine {
+  justify-content: flex-end;
+}
+
+.chat-message-row.theirs {
+  justify-content: flex-start;
+}
+
+.chat-bubble {
+  max-width: min(75%, 480px);
+  padding: 12px 15px;
+  border-radius: 14px;
+  overflow-wrap: anywhere;
+}
+
+.chat-bubble p {
+  margin: 0;
+  white-space: pre-wrap;
+  color: #FFFFFF;
+  line-height: 1.5;
+}
+
+.chat-bubble small {
+  display: block;
+  margin-top: 7px;
+  text-align: right;
+  color: #C4C4C4;
+  font-size: 10px;
+}
+
+.chat-bubble.mine {
+  background: #9B5100;
+  border-bottom-right-radius: 4px;
+}
+
+.chat-bubble.theirs {
+  background: #172235;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-bottom-left-radius: 4px;
+}
+
+.chat-composer {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.chat-input {
+  flex: 1;
+  min-height: 48px;
+  max-height: 120px;
+  resize: vertical;
+}
+
+.chat-send-btn {
+  width: auto;
+  min-width: 100px;
+}
+
+.chat-empty {
+  margin: auto;
+  text-align: center;
+  padding: 35px 15px;
+}
+
+.chat-empty h3 {
+  color: #FFFFFF;
+}
+
+.chat-empty p {
+  color: #8B98AA;
+}
+
+@media (max-width: 600px) {
+  .chat-messages {
+    height: 55vh;
+  }
+
+  .chat-composer {
+    align-items: stretch;
+  }
+
+  .chat-send-btn {
+    min-width: 75px;
+  }
+
+  .chat-bubble {
+    max-width: 88%;
+  }
+}
+/* ========================================
+   UNREAD MESSAGE BADGE
+======================================== */
+
+.unread-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 23px;
+  height: 23px;
+  padding: 0 7px;
+  margin-left: auto;
+  border-radius: 50px;
+  background: #FF8A00;
+  color: #05070D;
+  font-size: 11px;
+  font-weight: 800;
+  box-shadow: 0 0 12px rgba(255, 138, 0, 0.3);
+}
+
+/* ========================================
+   MESSAGE READ RECEIPTS
+======================================== */
+
+.message-receipt {
+  display: block;
+  margin-top: 5px;
+  text-align: right;
+  font-size: 10px;
+  opacity: 0.85;
+  color: #FF8A00;
+}
+/* ========================================
+   VIDLYRA CHAT - SCROLLBAR & LAYOUT FIX
+======================================== */
+
+/* Lock the page while chat is open */
+body:has(.chat-layout) {
+    overflow: hidden !important;
+}
+
+body:has(.chat-layout) #app {
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+/* Chat full-screen layout */
+.chat-layout {
+    height: 100vh !important;
+    height: 100dvh !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    box-sizing: border-box;
+}
+
+/* Chat main container */
+.chat-layout .chat-container {
+    height: calc(100dvh - 85px);
+    min-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chat card */
+.chat-layout .chat-card {
+    flex: 1;
+    height: 100%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Messages area */
+.chat-layout .chat-messages {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    scroll-behavior: smooth;
+}
+
+/* Hide Chrome scrollbar but preserve scrolling */
+.chat-layout .chat-messages::-webkit-scrollbar {
+    display: none;
+    width: 0;
+}
+
+/* Keep composer visible */
+.chat-layout .chat-composer {
+    flex-shrink: 0;
+}
+
+/* Keep message area responsive */
+.chat-layout .chat-message-row {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    .chat-layout .chat-container {
+        height: calc(100dvh - 75px);
+    }
+
+    .chat-layout .chat-card {
+        padding: 12px;
+    }
+}
+/* ========================================
+   VIDLYRA CHAT - MESSAGE NOTIFICATIONS
+======================================== */
+
+.notification-enable-btn {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 16px;
+  border: 1px solid rgba(255, 138, 0, 0.55);
+  border-radius: 11px;
+  background: rgba(255, 138, 0, 0.10);
+  color: var(--orange);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.notification-enable-btn:hover:not(:disabled) {
+  background: rgba(255, 138, 0, 0.18);
+  box-shadow: 0 0 18px rgba(255, 138, 0, 0.12);
+}
+
+.notification-enable-btn:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.notification-settings-hint {
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.vidlyra-notification-toast {
+  position: fixed;
+  z-index: 9999;
+  right: 22px;
+  bottom: 22px;
+  width: min(380px, calc(100vw - 32px));
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border: 1px solid rgba(255, 138, 0, 0.45);
+  border-radius: 15px;
+  background: linear-gradient(145deg, #111B2B, #080D17);
+  color: #FFFFFF;
+  text-align: left;
+  box-shadow: 0 18px 55px rgba(0, 0, 0, 0.5),
+              0 0 24px rgba(255, 138, 0, 0.12);
+  cursor: pointer;
+  animation: vidlyraToastIn 0.25s ease-out;
+}
+
+.vidlyra-notification-toast[hidden] {
+  display: none;
+}
+
+.notification-toast-icon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--orange);
+  border-radius: 12px;
+  color: var(--orange);
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 800;
+}
+
+.notification-toast-copy {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.notification-toast-copy strong {
+  color: #FFFFFF;
+  font-size: 13px;
+}
+
+.notification-toast-copy small {
+  color: #AAB4C2;
+  font-size: 11px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.notification-toast-arrow {
+  color: var(--orange);
+  font-size: 25px;
+}
+
+@keyframes vidlyraToastIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .vidlyra-notification-toast {
+    right: 16px;
+    bottom: 16px;
+  }
+}
+/* NOTIFICATION SOUND SETTING */
+
+.notification-sound-btn {
+  width: 100%;
+  min-height: 44px;
+  margin-top: 10px;
+  padding: 11px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  background: #0B1220;
+  color: #FFFFFF;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.notification-sound-btn:hover {
+  border-color: var(--orange);
+  background: #111B2B;
+}
+
+.notification-sound-btn[aria-pressed="true"] {
+  border-color: rgba(255, 138, 0, 0.6);
+  color: var(--orange);
+  background: rgba(255, 138, 0, 0.08);
+}
+
+/* ========================================
+   GROUP CONVERSATIONS
+======================================== */
+
+.group-section {
+  margin-top: 35px;
+}
+
+.group-section h2 {
+  margin: 10px 0 18px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.group-section h2 span {
+  color: #FF8A00;
+}
+
+.group-avatar {
+  background: rgba(255, 138, 0, 0.12);
+  border: 1px solid rgba(255, 138, 0, 0.25);
+}
+
+.group-avatar span {
+  font-size: 25px;
+}
+
+.group-conversation-card {
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.group-conversation-card:hover {
+  transform: translateY(-2px);
+  border-color: #FF8A00;
+}
+
+/* ========================================
+   GROUP CHAT
+======================================== */
+
+.group-sender-name {
+    display: block;
+    color: #FF8A00;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.group-chat-member-count {
+    display: block;
+    color: #8B98AA;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.message-time {
+    display: block;
+    text-align: right;
+    margin-top: 6px;
+    font-size: 10px;
+    color: #8B98AA;
+}
+
+.chat-message-row.sent {
+    justify-content: flex-end;
+}
+
+.chat-message-row.received {
+    justify-content: flex-start;
+}
+
+.chat-message-bubble {
+    max-width: 80%;
+    overflow-wrap: anywhere;
+}
+
+/* ========================================
+   VIDLYRA CHAT - MEDIA SHARING
+======================================== */
+
+.chat-attach-btn {
+    width: 46px;
+    min-width: 46px;
+    height: 46px;
+    display: grid !important;
+    place-items: center;
+    margin: 0 !important;
+    border: 1px solid rgba(255, 138, 0, 0.5);
+    border-radius: 12px;
+    background: rgba(255, 138, 0, 0.10);
+    color: #FF8A00 !important;
+    font-size: 22px !important;
+    letter-spacing: 0 !important;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.chat-attach-btn:hover {
+    background: rgba(255, 138, 0, 0.22);
+    box-shadow: 0 0 15px rgba(255, 138, 0, 0.15);
+}
+
+.chat-attachment-preview {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+    padding: 11px 13px;
+    border: 1px solid rgba(255, 138, 0, 0.35);
+    border-radius: 10px;
+    background: #111B2B;
+    color: #FFFFFF;
+    font-size: 12px;
+}
+
+.chat-attachment-preview[hidden] {
+    display: none;
+}
+
+.chat-attachment-preview small {
+    color: #8B98AA;
+}
+
+.media-clear-btn {
+    margin-left: auto;
+    border: none;
+    background: transparent;
+    color: #FF7777;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.chat-media-image-link {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.chat-media-image {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    max-height: 280px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.media-filename {
+    display: block;
+    margin-top: 7px;
+    color: #C4C4C4;
+    font-size: 10px;
+    overflow-wrap: anywhere;
+}
+
+.chat-file-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 180px;
+    padding: 12px;
+    border: 1px solid rgba(255, 138, 0, 0.3);
+    border-radius: 10px;
+    background: rgba(5, 7, 13, 0.35);
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.chat-file-link > span:first-child {
+    font-size: 25px;
+}
+
+.chat-file-link > span:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.chat-file-link strong {
+    overflow-wrap: anywhere;
+    font-size: 12px;
+}
+
+.chat-file-link small {
+    color: #AAB4C2;
+    font-size: 10px;
+}
+
+.chat-file-link:hover {
+    border-color: #FF8A00;
+}
+
+.media-unavailable {
+    color: #FF9999;
+    font-size: 12px;
+}
+
+@media (max-width: 600px) {
+    .chat-attach-btn {
+        width: 42px;
+        min-width: 42px;
+        height: 46px;
+    }
+
+    .chat-media-image {
+        max-width: 220px;
+    }
+}
+.chat-attachment-preview {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    margin: 10px 0;
+    background: #0B1220;
+    border: 1px solid rgba(255, 138, 0, 0.35);
+    border-radius: 12px;
+    flex-wrap: wrap;
+}
+
+.chat-attachment-preview[hidden] {
+    display: none !important;
+}
+
+.chat-selected-image {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #FF8A00;
+}
+
+.chat-selected-file-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+.chat-selected-file-info small {
+    color: #8B98AA;
+}
+
+.media-clear-btn {
+    background: transparent;
+    color: #FF8A00;
+    border: 1px solid #FF8A00;
+    border-radius: 8px;
+    padding: 7px 10px;
+    cursor: pointer;
+}
+/* =========================================
+   VIDLYRA CHAT - BLOCK / UNBLOCK UI
+========================================= */
+
+/* Block button */
+.chat-block-btn {
+    border: 1px solid rgba(255, 80, 80, 0.45);
+    color: #ff7777;
+    background: rgba(255, 80, 80, 0.06);
+    margin-left: 8px;
+    transition: all 0.25s ease;
+}
+
+.chat-block-btn:hover {
+    background: rgba(255, 80, 80, 0.14);
+    border-color: #ff5555;
+    color: #ff5555;
+    box-shadow: 0 0 14px rgba(255, 80, 80, 0.12);
+}
+
+/* Blocked users page card */
+.blocked-user-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 12px;
+    padding: 15px;
+    border: 1px solid rgba(255, 138, 0, 0.16);
+    border-radius: 14px;
+    background: rgba(11, 18, 32, 0.85);
+    transition: all 0.25s ease;
+}
+
+.blocked-user-card:hover {
+    border-color: rgba(255, 138, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+/* Blocked user avatar */
+.blocked-user-card .people-result-avatar {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    overflow: hidden;
+    border-radius: 50%;
+    background: #151d2d;
+}
+
+.blocked-user-card .people-result-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Unblock button */
+.unblock-user-btn {
+    color: #ff8a00;
+    border: 1px solid rgba(255, 138, 0, 0.4);
+    background: rgba(255, 138, 0, 0.06);
+    white-space: nowrap;
+    transition: all 0.25s ease;
+}
+
+.unblock-user-btn:hover {
+    background: rgba(255, 138, 0, 0.14);
+    border-color: #ff8a00;
+    box-shadow: 0 0 12px rgba(255, 138, 0, 0.12);
+}
+
+/* Blocked users navigation */
+#openBlockedUsersButton {
+    margin-top: 12px;
+}
+
+/* Disabled chat composer */
+#chatInput:disabled,
+#chatSendButton:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
+#chatInput:disabled {
+    border-color: rgba(255, 80, 80, 0.3);
+}
+
+/* Block warning message */
+#chatMessage.auth-message.error {
+    color: #ff7777;
+    padding: 8px 12px;
+    margin-top: 8px;
+    border-left: 3px solid #ff5555;
+    background: rgba(255, 80, 80, 0.07);
+    border-radius: 6px;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .blocked-user-card {
+        flex-wrap: wrap;
+    }
+
+    .chat-block-btn {
+        margin-left: 0;
+    }
+
+    .unblock-user-btn {
+        margin-left: auto;
+    }
+}
+/* =================================
+   VIDLYRA CHAT - THREE DOT MENUS
+================================= */
+
+.message-actions-menu,
+.chat-options-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.message-actions-menu summary,
+.chat-options-menu summary {
+    list-style: none;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-size: 23px;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.message-actions-menu summary::-webkit-details-marker,
+.chat-options-menu summary::-webkit-details-marker {
+    display: none;
+}
+
+.message-actions-menu summary:hover,
+.chat-options-menu summary:hover {
+    background: #FF8A0025;
+    color: #FF8A00;
+}
+
+.message-actions-dropdown,
+.chat-options-dropdown {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 5px);
+    z-index: 100;
+    min-width: 145px;
+    padding: 6px;
+    background: #111B2B;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    box-shadow: 0 12px 35px #00000080;
+}
+
+.message-actions-dropdown button,
+.chat-options-dropdown button {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: #FFFFFF;
+    text-align: left;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.message-actions-dropdown button:hover,
+.chat-options-dropdown button:hover {
+    background: #FF8A0020;
+    color: #FF8A00;
+}
+
+.message-actions-dropdown .danger-action {
+    color: #FF7777;
+}
+
+.message-actions-dropdown .danger-action:hover {
+    background: #FF444420;
+    color: #FF7777;
+}
+
+.chat-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.chat-options-menu {
+    flex-shrink: 0;
+}
+
+.chat-options-menu summary {
+    border: 1px solid rgba(255,255,255,0.12);
+    background: #111B2B;
+}
+
+/* =========================================
+   VIDLYRA CHAT - PREMIUM THREE DOT MENUS
+========================================= */
+
+.message-actions-menu,
+.chat-options-menu {
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+/* Three-dot trigger */
+.message-actions-menu summary,
+.chat-options-menu summary {
+    list-style: none;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 10px;
+    background: rgba(17, 27, 43, 0.95);
+    color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.message-actions-menu summary::-webkit-details-marker,
+.chat-options-menu summary::-webkit-details-marker {
+    display: none;
+}
+
+.message-actions-menu summary:hover,
+.chat-options-menu summary:hover {
+    color: #FF8A00;
+    border-color: rgba(255, 138, 0, 0.55);
+    background: rgba(255, 138, 0, 0.10);
+    box-shadow: 0 0 14px rgba(255, 138, 0, 0.12);
+}
+
+.message-actions-menu[open] summary,
+.chat-options-menu[open] summary {
+    color: #FF8A00;
+    border-color: #FF8A00;
+}
+
+/* Dropdown panel */
+.message-actions-dropdown,
+.chat-options-dropdown {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 7px);
+    z-index: 999;
+    min-width: 155px;
+    padding: 6px;
+    background: #111B2B;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.65);
+    animation: vidlyraMenuOpen 0.16s ease;
+}
+
+@keyframes vidlyraMenuOpen {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dropdown buttons */
+.message-actions-dropdown button,
+.chat-options-dropdown button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    min-height: 38px;
+    padding: 9px 11px;
+    border: none;
+    border-radius: 8px;
+    background: transparent;
+    color: #FFFFFF;
+    text-align: left;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.18s ease;
+}
+
+.message-actions-dropdown button:hover,
+.chat-options-dropdown button:hover {
+    background: rgba(255, 138, 0, 0.12);
+    color: #FF8A00;
+}
+
+/* Delete action */
+.message-actions-dropdown button.danger-action {
+    color: #FF7777;
+}
+
+.message-actions-dropdown button.danger-action:hover {
+    background: rgba(255, 70, 70, 0.12);
+    color: #FF5555;
+}
+
+/* Chat header actions */
+.chat-header-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 9px;
+    margin-left: auto;
+}
+
+.chat-options-menu summary {
+    width: 36px;
+    height: 36px;
+}
+
+/* Message layout */
+.chat-message-row {
+    position: relative;
+    overflow: visible;
+}
+
+.chat-message-bubble {
+    position: relative;
+    overflow: visible;
+}
+
+/* Mobile touch support */
+@media (max-width: 600px) {
+    .message-actions-menu summary,
+    .chat-options-menu summary {
+        width: 38px;
+        height: 38px;
+    }
+
+    .message-actions-dropdown,
+    .chat-options-dropdown {
+        min-width: 150px;
+    }
+
+    .chat-header-actions {
+        gap: 6px;
+    }
+}
+.message-edited-label {
+    display: block;
+    margin-top: 4px;
+    color: #FF8A00;
+    font-size: 10px;
+    font-style: italic;
+}
+/* SELECTED MESSAGE HIGHLIGHT */
+.chat-message-row.is-selected .chat-message-bubble {
+    outline: 2px solid #FF8A00;
+    box-shadow: 0 0 14px rgba(255, 138, 0, 0.22);
+    border-radius: 14px;
+}
+
+/* HEADER MENU DISABLED STATE */
+.chat-options-dropdown button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
